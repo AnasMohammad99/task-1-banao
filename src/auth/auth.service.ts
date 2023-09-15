@@ -22,7 +22,7 @@ export class AuthService {
   async validateUser(email: string, password: string) {
     try {
       const user = await this.database.users.findFirst({
-        where: { OR: [{ email }, { phoneNumber: email }] },
+        where: { OR: [{ email }] },
       });
       if (user) {
         const isMatch = await bcrypt.compare(password, user.password);
