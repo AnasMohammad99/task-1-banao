@@ -124,7 +124,6 @@ export class AuthService {
           HttpStatus.BAD_REQUEST,
         );
       }
-      // const client = new Twilio(process.env.TWILIO_ACCOUNT_SID,process.env.TWILIO_AUTHTOKEN);
       const fourDigits = Math.floor(Math.random() * 9000) + 1000;
 
       const secret = process.env.ACCESS_SECRET;
